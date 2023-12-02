@@ -190,8 +190,8 @@
             $area = $_SESSION["area"];
             
             echo "<p>$username,你负责的区域是$area</p>";
-	    // 以下内容因尚未连接到后端，暂时不显示
-            // 查询该区域的历史订单信息
+	    
+            // 查询该区域的历史订单信息。以下内容因尚未连接到后端，暂时不显示
             $query = "select * from order_info where area = '$area'";
             $result = mysqli_query($connect, $query);
             // 如果有订单信息，就输出表格
