@@ -208,54 +208,54 @@
 <body>
     <h1>Shop</h1>
     <div class="shop-info">
-        <img src="https://th.bing.com/th/id/OIP.KmuUXmazZ7mHwazvkwegwQHaGQ?rs=1&pid=ImgDetMain" alt="店铺logo" class="shop-logo">
-        <span class="shop-name">鲜果时光水果店</span>
+        <img src="https://th.bing.com/th/id/OIP.KmuUXmazZ7mHwazvkwegwQHaGQ?rs=1&pid=ImgDetMain" alt="store_logo" class="shop-logo">
+        <span class="shop-name">Fresh Fruit store</span>
     </div>
     <div class="product-list">
-        <div class="product-item" data-name="苹果" data-price="5" data-stock="12">
+        <div class="product-item" data-name="Apple" data-price="5" data-stock="12">
             <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="苹果" class="product-image">
-            <span class="product-name">苹果</span>
-            <span class="product-price">¥5/斤</span>
-            <span class="product-stock">库存：12斤</span>
+            <span class="product-name">Apple</span>
+            <span class="product-price">¥5/catty</span>
+            <span class="product-stock">Inventory：12catty</span>
         </div>
-        <div class="product-item" data-name="香蕉" data-price="4" data-stock="15">
+        <div class="product-item" data-name="Banana" data-price="4" data-stock="15">
             <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="香蕉" class="product-image">
-            <span class="product-name">香蕉</span>
-            <span class="product-price">¥4/斤</span>
-            <span class="product-stock">库存：15斤</span>
+            <span class="product-name">Banana</span>
+            <span class="product-price">¥4/catty</span>
+            <span class="product-stock">Inventory：15catty</span>
         </div>
-        <div class="product-item" data-name="鲜牛奶" data-price="8" data-stock="23">
+        <div class="product-item" data-name="Fresh milk" data-price="8" data-stock="23">
             <img src="https://images.pexels.com/photos/236010/pexels-photo-236010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="牛奶" class="product-image">
-            <span class="product-name">鲜牛奶</span>
-            <span class="product-price">¥8/盒</span>
-            <span class="product-stock">库存：23盒</span>
+            <span class="product-name">Fresh milk</span>
+            <span class="product-price">¥8/carton</span>
+            <span class="product-stock">Inventory：23carton</span>
         </div>
     </div>
     <!-- Add a shopping cart button -->
-    <button class="cart-button">购物车</button>
+    <button class="cart-button">Shopping Cart</button>
     <!-- Add a shopping cart list -->
     <div class="cart-list">
-        <h3>购物车</h3>
-        <div class="cart-item" data-name="苹果" data-price="5">
+        <h3>Shopping Cart</h3>
+        <div class="cart-item" data-name="Apple" data-price="5">
             <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="苹果" class="cart-image">
-            <span class="cart-name">苹果</span>
-            <span class="cart-quantity">数量：1斤</span>
-            <span class="cart-price">单价：¥5/斤</span>
+            <span class="cart-name">Apple</span>
+            <span class="cart-quantity">Quantity：1catty</span>
+            <span class="cart-price">Unit price：¥5/catty</span>
         </div>
-        <div class="cart-item" data-name="香蕉" data-price="4">
+        <div class="cart-item" data-name="Banana" data-price="4">
             <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="香蕉" class="cart-image">
-            <span class="cart-name">香蕉</span>
-            <span class="cart-quantity">数量：1斤</span>
-            <span class="cart-price">单价：¥4/斤</span>
+            <span class="cart-name">Banana</span>
+            <span class="cart-quantity">Quantity：1catty</span>
+            <span class="cart-price">Unit price：¥4/catty</span>
         </div>
-        <div class="cart-item" data-name="鲜牛奶" data-price="8">
+        <div class="cart-item" data-name="Fresh milk" data-price="8">
             <img src="https://images.pexels.com/photos/236010/pexels-photo-236010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="牛奶" class="cart-image">
-            <span class="cart-name">鲜牛奶</span>
-            <span class="cart-quantity">数量：1盒</span>
-            <span class="cart-price">单价：¥8/盒</span>
+            <span class="cart-name">Fresh milk</span>
+            <span class="cart-quantity">Quantity：1carton</span>
+            <span class="cart-price">Unit price：¥8/carton</span>
         </div>
         <div class="cart-total">
-            <span class="cart-amount">总计：¥17</span>
+            <span class="cart-amount">Total：¥17</span>
         </div>
     </div>
     <!-- Add some JavaScript and jQuery functionality -->
@@ -331,9 +331,9 @@ function updateCartButton() {
     var cartButton = $(".cart-button");
     // If the goods in the shopping cart are displayed on the button, the total amount of the goods will be displayed otherwise the shopping cart will be displayed
     if (cart.count > 0) {
-        cartButton.text("购物车(" + cart.count + ")");
+        cartButton.text("Shopping Cart(" + cart.count + ")");
     } else {
-        cartButton.text("购物车");
+        cartButton.text("Shopping Cart");
     }
 }
 
@@ -346,7 +346,7 @@ function updateCartList() {
     // Empty the contents of the shopping cart list
     cartList.empty();
     // Add a title to the shopping cart list
-    cartList.append("<h3>购物车</h3>");
+    cartList.append("<h3>Shopping Cart</h3>");
     // Walk through the list of items in the shopping cart and create an element for each item to add to the shopping cart list
     for (var i = 0; i < cart.items.length; i++) {
         var item = cart.items[i];
@@ -355,8 +355,8 @@ function updateCartList() {
         cartItem.attr("data-price", item.price);
         // Delete the item image element from the shopping cart list
         cartItem.append("<span class='cart-name'>" + item.name + "</span>");
-        cartItem.append("<span class='cart-quantity'>数量：" + item.quantity + "</span>");
-        cartItem.append("<span class='cart-price'>单价：¥" + item.price + "</span>");
+        cartItem.append("<span class='cart-quantity'>Quantity：" + item.quantity + "</span>");
+        cartItem.append("<span class='cart-price'>Unit price：¥" + item.price + "</span>");
         // Add a "+" button for each item in the shopping cart list, showing the" +" symbol
         cartItem.append("<button class='add-button'>+</button>");
         // Bind a click event to each "+" button, and when clicked, add one unit of that item to the shopping cart
