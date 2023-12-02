@@ -12,7 +12,7 @@ for (let i = 0; i < info_btn.length; i++) {
             case 'Seller':
                 window.location.href = 'https://cuagiain.github.io/Group11/creatShop.html'; // 替换为卖家页面的
                 break;
-            case 'Older people':
+            case 'User':
                 window.location.href = 'https://cuagiain.github.io/Group11/home.html'; // 替换为老年人页面
                 break;
             case 'Volunteer':
