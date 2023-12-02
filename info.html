@@ -181,7 +181,7 @@
         <?php	    
         // 连接数据库
         $connect = mysqli_connect("localhost", "root", "", "orders") or die("Connection failed");
-	    // 以下内容因尚未连接到后端，暂时不显示
+	    
         // 检查用户是否登录
         session_start();
         if(isset($_SESSION["username"])) {
@@ -190,6 +190,7 @@
             $area = $_SESSION["area"];
             
             echo "<p>$username,你负责的区域是$area</p>";
+	    // 以下内容因尚未连接到后端，暂时不显示
             // 查询该区域的历史订单信息
             $query = "select * from order_info where area = '$area'";
             $result = mysqli_query($connect, $query);
