@@ -1,0 +1,117 @@
+<html>
+<head>
+    <style>
+        #top{
+        color: #ffffff;
+        padding: 15px;
+        font-size: 30px;
+        line-height: 26px;
+        text-align: center;
+        }  
+        
+        #comment{
+            font-size: 15px;
+            color: gray;
+        }
+        .box{
+        align-items: center;
+        text-align: center;
+        display:flex;
+        height:650px;
+        width:750px;
+        border-radius: 1.5rem;
+        margin:10% auto;
+        }
+        input[type=submit] {
+            width: 20%;
+            background-color: orange;
+            color: gray;
+            font-size: 20px;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color:  rgb(254, 224, 31);
+        }
+        .container
+        {
+            position:relative;
+            width:750px;
+            min-height:400px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+            border:1px solid rgba(255,255,255,0.5);
+            border-right:1px solid rgba(255,255,255,0.2);
+            border-bottom:1px solid rgba(255,255,255,0.2);
+        }
+        #dear{
+        color: rgb(255, 194, 10);
+        padding: 15px;
+        font-size: 30px;
+        line-height: 26px;
+        text-align: left;
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+        function saveUsername() {
+            var username = document.getElementById('usernameInput').value;
+            localStorage.setItem('username', username);
+        }
+    </script>
+    <meta name="viewport" contect="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="createbuyer.css" />
+    
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+        <div class="form">
+            <form action="createbuyer.html"  onsubmit="saveUsername()">
+                <div id="top"><h1>My Information</h1></div>
+                <div class="content"> 
+                    <p id="savedInfo">Your saved information will appear here.</p > 
+                        </form>
+                    <!-- rest of your HTML --> </div>
+                <div id="dear">
+                    <script>
+                    var username = localStorage.getItem('username');
+                    document.getElementById('welcomeMessage').innerText = 'Welcome, ' + username + '!';
+                </script>
+                </div>
+                <p1>Your phone number: </p1><br><br>
+                <div class="input">
+                </div>
+                <p1>Your phone number: </p1><br><br>
+                <div class="input">
+                
+                </div>
+                <p1>Your building number:</p1><br><br>
+                <div class="input">
+                
+                </div>
+                <p1>Your Take-out cabinet:</p1><br><br>
+                <div class="input">
+                
+                </div>     
+                
+                
+                <p1>Would you like to become our member </p1><br>
+                <input type="radio" name="ifmember" value="member" checked> Yes
+                <input type="radio" name="ifmember" value="nonmember"> No<br>
+                <p id="comment">*If you would like to purchase our membership card, you will enjoy a 10% discount on every purchase you make on this website in the  future</p>
+                <div class="sub">
+                <br><input type="submit" value="Submit" ></div>
+            </form>
+            </div>

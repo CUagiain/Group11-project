@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+        #top{
+        color: #ffffff;
+        padding: 15px;
+        font-size: 30px;
+        line-height: 26px;
+        text-align: center;
+        }  
+        div{
+            content: '';
+            width:100%;
+            height:100%;
+            position:fixed;
+            z-index:-1;
+            background: linear-gradient(120deg,#f8f477 0%, #f8e359 100%) no-repeat;
+        }
+        </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function saveUsername() {
+            var username = document.getElementById('usernameInput').value;
+            localStorage.setItem('username', username);
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+    <div id="form" >
+        <form action="createbuyer.html"  onsubmit="saveUsername()">
+        <div id="top"><h1>My home</h1></div>
+        <div id="dear">
+            <script>
+            var username = localStorage.getItem('username');
+            document.getElementById('welcomeMessage').innerText = 'Welcome, ' + username + '!';
+        </script>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                <img src="img1.jpg">
+                </div>
+                <div class="content">
+                <h2>My Information</h2>
+                <p>Please fill in your information first to match volunteers to serve you.</p >
+                <br><a href="MyInformation.html">click here</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                <img src="img2.jpg">
+                </div>
+                <div class="content">
+                <h2>Order now</h2>
+                <p>Please enter your requirements in the input box and a volunteer will take the order and serve you</p >
+                <br><a href="OrderNow.html">click here</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                <img src="img3.jpg">
+                </div>
+                <div class="content">
+                <h2>MyComment</h2>
+                <p>After receiving the item, you can enter the order number and evaluate the item in the order, we look forward to receiving your feedback</p>
+                <br><a href="MyComment.html">click here</a>
+                </div>
+            </div>
+        </form>
+        </div>
+        </div> 
+    </div>   
+    </body>
+</html>
