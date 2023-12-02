@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+          background-color: rgb(235, 232, 200);
+          font-family: Arial, sans-serif;
+        }
+
+        h1 {
+          color: rgb(191, 0, 255);
+          text-align: center;
+        }
+
+        div {
+          width: 400px;
+          margin: 20px auto;
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"], input[type="password"], input[type="tel"], select {
+          width: 80%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+          width: 85%;
+          padding: 10px;
+          margin-top: 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: rgb(0, 123, 255);
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+          background-color: rgb(0, 105, 217);
+        }
+
+        @keyframes example {
+          0%   {background-color: lightblue;}
+          25%  {background-color: yellow;}
+          50%  {background-color: white;}
+          100% {background-color: lightgreen;}
+        }
+        </style>
+    </head>
+<body>
+<h1>Volunteer Registration Page</h1>
+<form>
+<div>
+<input type="text" name="firstname" placeholder="First name">
+</div>
+<div>
+<input type="text" name="lastname" placeholder="Last name">
+</div>
+<div>
+  <input type="text" name="pwd" placeholder="ID">
+  </div>
+<div>
+<input type="password" name="pwd" placeholder="Password">
+</div>
+<div>
+<br>
+Choose the building you serve for:<select name="address">
+    <option value="Building A">16</option>
+    <option value="Building B">17</option>
+    <option value="Building C">18</option>
+    <option value="Building D">19</option>
+    <option value="Building E">20</option>
+    <option value="Building F">21</option>
+    <option value="Building G">22</option>
+    <option value="Building H">23</option>
+    <option value="Building I">24</option>
+    <option value="Building J">25</option>
+    <option value="Building K">26</option>
+    <option value="Building L">27</option>
+    <option value="Building M">28</option>
+    <option value="Building M">29</option>
+    </select>
+<br>
+</div>
+<div>
+<input type="password" name="pwd2" placeholder="Confirm your password">
+</div>
+<div>
+<input type="tel" name="phone1" placeholder="Phone number">
+</div>
+<div>
+<input type="button" value="Submit Registration" onclick="window.location.href='https://github.com/CUagiain/Group11-project/info.html'">
+</div>
+</form>
+</body>
+</html>

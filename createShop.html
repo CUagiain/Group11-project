@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-image: url('background_1.jpg');
+            background-size:20cm;
+        }
+
+        #para1 {
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+            color:rgb(0, 0, 0);
+            background-color:  rgb(255, 213, 0);
+            padding: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+            border-radius: 7px;
+            border: 2px solid #000000;
+        }     
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position:center;
+            width: 100%;
+            border-radius: 6px;
+            }
+
+        li {
+            float:left;
+            border-right: 2px solid #ffffff;
+            border-radius: 6px;
+            }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding-left: 150.5px;
+            padding-right: 150.5px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-decoration: none;
+            }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+            border-radius: 6px;
+            }
+
+        .active {
+            background-color:  rgb(255, 213, 0);
+            color: rgb(0, 0, 0);
+            border-radius: 6px;
+            }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 2px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=password], select {
+            width: 100%;
+            padding: 12px 2px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 20%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 14px;
+            margin-left: 16cm;
+            margin-bottom: 1cm;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color:  rgb(255, 213, 0);
+            color: #000000;
+            border-radius: 4px;
+            border: 2px solid black;
+            border-color: #000000;
+        }
+
+        input[type=text]:focus {
+            background-color:rgb(255, 246, 207);
+        }
+
+        div {
+            width: 30%;
+            border-radius: 7px;
+            background-color: #f2f2f2;
+
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-right: 50px;
+            padding-left: 50px;
+
+            margin: 0 auto;
+            border: 2px solid #000000;
+        }
+
+    </style> 
+</head>
+<body>
+    <ul>
+        <!-- <li><a class="active" href="createShop.html">Create shop</a></li>
+        <li><a href = "">My Shop</a></li>
+        <li><a href="">My Order</a></li>
+        <li><a href="3.html">Log out</a></li> -->
+
+        <li><a class="active" href="https://github.com/CUagiain/Group11/createShop.html">Create shop</a></li>
+        <li><a href = "">My Shop</a></li>
+        <li><a href="">My Order</a></li>
+        <li><a href="https://github.com/CUagiain/Group11/3.html">Log out</a></li>
+
+    </ul>
+    <h1 id = "para1">Seller, Wellcome.<br>Please create your account and your shop here.</h1>
+    <div>
+        <h2 style = "text-align: center";>Creat your account</h2>
+        <form onsubmit="saveFunction()"></form>
+        <label>Your Username:</label><br>
+        <input type="text" id="usernameInput" name="usernameInput" placeholder="Your Username..." required>
+        <br><br>
+
+        <label>Your Password:</label><br>
+        <input type="password" id="passwordInput" name="passwordInput" placeholder="Your Password..." required>
+        <br><br>
+
+        <label>Your Phone Number:</label><br>
+        <input type="text" id="phoneInput" name="phoneInput" placeholder="Your Phone Number..." required>
+        <br><br>
+    </div>
+    <br>
+    <div>
+        <h2 style = "text-align: center";>Create your shop</h2>
+        <!-- <form action="createSuccess!.html" onsubmit="saveFunction()"> -->
+            <form action="https://github.com/CUagiain/Group11/createSuccess!" onsubmit="saveFunction()"> 
+          <label>Your Shop Name:</label><br>
+          
+          <input type="text" id="shopnameInput" name="shopnameInput" placeholder=" Your Shop Name..." required>
+            <br><br>
+                
+            <label>Your Goods Type:</label><br>
+            <select id="goods" name="goods" required>
+            <option value="null"></option>
+            <option value="Cold-chain Food">Cold-chain Food</option>
+            <option value="Take-out Foods">Take-out Foods</option>
+            <option value="Daily Use">Daily Use</option>
+            <option value="Medicine">Medicine</option>
+            </select>
+            <br><br>
+    </div>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+    <script> 
+        function saveFunction() {
+            var username = document.getElementById('usernameInput').value;
+            localStorage.setItem('username', username);
+
+            var phone = document.getElementById('phoneInput').value;
+            localStorage.setItem('phone', phone);
+
+            var shopname = document.getElementById('shopnameInput').value;
+            localStorage.setItem('shopname', shopname);
+
+            var goods = document.getElementById('goods').value;
+            localStorage.setItem('goods', goods);
+        }
+    </script>
+</body>
+</html>
+

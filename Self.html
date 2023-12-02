@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f5dc; 
+            line-height: 20px;
+            color: #333; 
+        }
+        
+        .container {
+            min-width: 900px;
+        }
+        
+        .wrapper {
+            background-color: #fffbe6; 
+            position: relative;
+            overflow: auto;
+        }
+        
+        #top {
+            color: #4a4a4a; 
+            padding: 15px;
+            font-size: 30px;
+            line-height: 26px;
+            background-color: #f0ead6; 
+        }
+        
+        #top h1 {
+            margin: 0;
+            line-height: 50px;
+            color: #8a6d3b; 
+        }
+        
+        #menubar {
+            width: 190px;
+            float: right;
+        }
+        
+        #main {
+            padding: 10px;
+            background-color: #ffffff;
+            font: 80% Verdana;
+        }
+        
+        #main h1, #main h2 {
+            color: #6b8e23; 
+        }
+        
+        #sidebar {
+            margin-bottom: 500px;
+            background-color: #ffffe0; 
+            color: #8b4513; 
+            padding: 10px;
+        }
+        
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            color: #ffffff;
+            background-color: #8a6d3b; 
+        }
+        
+        #menulist {
+            padding: 0;
+            font: 16px verdana;
+        }
+        
+        .menuitem {
+            width: 155px;
+            background-color: #6b8e23; 
+            border: 1px solid lightskyblue;
+            border-radius: 40px;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+       
+        .menuitem:hover {
+            background-color: #ffffff;
+            color: #6b8e23; 
+        }
+        
+        a {
+            color: #6b8e23;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+p{
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <div id="top">
+    <h1>Volunteer self info</h1><br />
+  </div>
+  <div class="wrapper">
+   <div id="menubar">
+     <ul id="menulist">
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/info.html'">Volunteer home page</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Order_taking.html'">Untreated Order</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Historical_Order.html'">History</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Shop.html'">Shop</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/self.html'">Self Info</li>
+     </ul>
+    </div> 
+    <div id="sidebar">
+        <img src="..." alt="Volunteer pic" class="user-avatar" style="text-align: center ;">
+        <p>Name:   $</p>
+        <br>
+        <p>Phone number:  $</p>
+        <br>
+        <p>Area:   </p>
+        <p>Add new phone number:
+        <input type="tel" placeholder="new phone num" ></p>
+        <p><input type="submit"> to make a change</input></p>
+    </div>
+    </body>
+    </html>

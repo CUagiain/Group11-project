@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+        font-family: Arial;
+        background-color: #f5f5dc; 
+        line-height: 20px;
+        color: #333; 
+    }
+    
+    .container {
+        min-width: 900px;
+    }
+    
+    .wrapper {
+        background-color: #fffbe6; 
+        position: relative;
+        overflow: auto;
+    }
+    
+    #top {
+        color: #4a4a4a; 
+        padding: 15px;
+        font-size: 30px;
+        line-height: 26px;
+        background-color: #f0ead6; 
+    }
+    
+    #top h1 {
+        margin: 0;
+        line-height: 50px;
+        color: #8a6d3b; 
+    }
+    
+    #menubar {
+        width: 190px;
+        float: right;
+    }
+    
+    #main {
+        padding: 10px;
+        background-color: #ffffff;
+        font: 80% Verdana;
+    }
+    
+    #main h1, #main h2 {
+        color: #6b8e23; 
+    }
+    
+    #sidebar {
+        margin-bottom: 500px;
+        background-color: #ffffe0; 
+        color: #8b4513; 
+        padding: 10px;
+    }
+    
+    #bottom {
+        text-align: center;
+        padding: 10px;
+        font-size: 70%;
+        color: #ffffff;
+        background-color: #8a6d3b; 
+    }
+    
+    #menulist {
+        padding: 0;
+        font: 16px verdana;
+    }
+    
+    .menuitem {
+        width: 155px;
+        background-color: #6b8e23; 
+        border: 1px solid lightskyblue;
+        border-radius: 40px;
+        color: #ffffff;
+        list-style-type: none;
+        margin: 10px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+   
+    .menuitem:hover {
+        background-color: #ffffff;
+        color: #6b8e23; 
+    }
+    
+    a {
+        color: #6b8e23;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    .order-table {
+        width: 80%;
+        margin: 20px auto;
+        border: 1px solid gray;
+        border-collapse: collapse;
+    }
+    
+    .order-table th {
+        background-color: #f0ead6; 
+        padding: 10px;
+    }
+    
+    .order-table td {
+        border: 1px solid gray;
+        padding: 10px;
+    }
+    </style>
+<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   		<link rel="stylesheet" href="bootstrap.min.css" >
+
+		<script src="jquery-3.5.1.min.js"></script>
+		<script src="bootstrap.bundle.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container wrapper">
+    <div id="carouselExampleCaptions" class="carousel slide" background="green">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img-pre.ivsky.com/img/bizhi/pre/201108/07/3d_fengjing-019.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://img-pre.ivsky.com/img/bizhi/pre/201108/07/3d_fengjing-016.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="crousel-item">
+            <img src="https://img-pre.ivsky.com/img/bizhi/pre/201108/07/3d_fengjing-021.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  <div id="top">
+    <h1>Volunteer Home page</h1><br />
+    <h2>Welcome back volunteer!</h2>
+  </div>
+  <div class="wrapper">
+   <div id="menubar">
+     <ul id="menulist">
+      <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/info.html'">Volunteer home page</li>
+      <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Order_taking.html'">Untreated Order</li>
+      <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Historical_Order.html'">History</li>
+      <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Shop.html'">Shop</li>
+      <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/self.html'">Self Info</li>
+     </ul>
+    </div>
+    
+    <div id="sidebar">
+        <?php
+        // 连接数据库
+        $connect = mysqli_connect("localhost", "root", "", "orders") or die("Connection failed");
+        // 检查用户是否登录
+        session_start();
+        if(isset($_SESSION["username"])) {
+            // 获取用户的用户名和区域
+            $username = $_SESSION["username"];
+            $area = $_SESSION["area"];
+            
+            echo "<p>$username,你负责的区域是$area</p>";
+            // 查询该区域的历史订单信息
+            $query = "select * from order_info where area = '$area'";
+            $result = mysqli_query($connect, $query);
+            // 如果有订单信息，就输出表格
+            if(mysqli_num_rows($result) > 0) {
+                echo "<table class='order-table'>";
+                echo "<tr>";
+                echo "<th>订单号</th>";
+                echo "<th>用户</th>";
+                echo "<th>地址</th>";
+                echo "<th>商品</th>";
+                echo "<th>金额</th>";
+                echo "</tr>";
+                // 遍历每一条订单信息，输出到表格中
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>";
+                    echo "<td>".$row["order_id"]."</td>";
+                    echo "<td>".$row["user"]."</td>";
+                    echo "<td>".$row["address"]."</td>";
+                    echo "<td>".$row["product"]."</td>";
+                    echo "<td>".$row["amount"]."</td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+            } else {
+                // 如果没有订单信息，就输出提示信息
+                echo "<p>该区域没有历史订单</p>";
+            }
+        } else {
+            // 如果用户没有登录，就输出提示信息，并跳转到登录页面
+            echo "<p>请先登录，才能查看历史订单</p>";
+            header("refresh:3;url=login.php");
+        }
+    ?>
+    </div>
+  </div>  
+  
+  
+  
+</div>
+
+<script>
+
+</script>
+</body>
+</html>

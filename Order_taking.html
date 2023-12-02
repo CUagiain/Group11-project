@@ -1,0 +1,178 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f5dc; 
+            line-height: 20px;
+            color: #333; 
+        }
+        
+        .container {
+            min-width: 900px;
+        }
+        
+        .wrapper {
+            background-color: #fffbe6; 
+            position: relative;
+            overflow: auto;
+        }
+        
+        #top {
+            color: #4a4a4a; 
+            padding: 15px;
+            font-size: 30px;
+            line-height: 26px;
+            background-color: #f0ead6; 
+        }
+        
+        #top h1 {
+            margin: 0;
+            line-height: 50px;
+            color: #8a6d3b; 
+        }
+        
+        #menubar {
+            width: 190px;
+            float: right;
+        }
+        
+        #main {
+            padding: 10px;
+            background-color: #ffffff;
+            font: 80% Verdana;
+        }
+        
+        #main h1, #main h2 {
+            color: #6b8e23; 
+        }
+        
+        #sidebar {
+            margin-bottom: 500px;
+            background-color: #ffffe0; 
+            color: #8b4513; 
+            padding: 10px;
+        }
+        
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            color: #ffffff;
+            background-color: #8a6d3b; 
+        }
+        
+        #menulist {
+            padding: 0;
+            font: 16px verdana;
+        }
+        
+        .menuitem {
+            width: 155px;
+            background-color: #6b8e23; 
+            border: 1px solid lightskyblue;
+            border-radius: 40px;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+       
+        .menuitem:hover {
+            background-color: #ffffff;
+            color: #6b8e23; 
+        }
+        
+        a {
+            color: #6b8e23;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    p{
+        text-align: center;
+    }
+</style>
+    <!-- Import the Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Introduce Bootstrap JS file and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Introduce the icon library of the same image -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <style>
+            h1 {
+                font-size: 54px; 
+                color: rgb(0, 145, 255); 
+                text-align: center; 
+            }
+
+            p {
+                font-size: 36px; 
+                color: black; 
+                text-align: center; 
+            }
+    </style>
+  <div class="wrapper">
+   <div id="menubar">
+     <ul id="menulist">
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/info.html'">Volunteer home page</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Order_taking.html'">Untreated Order</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Historical_Order.html'">History</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/Shop.html'">Shop</li>
+        <li class="menuitem" onclick="window.location.href='https://github.com/CUagiain/Group11-project/self.html'">Self Info</li>
+     </ul>
+    </div> 
+    <div id="sidebar">
+        <h1>Order receiving interface</h1>
+        <p>The followings are the order information in the current area</p>
+        <!-- Use the table style from Bootstrap -->
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th>订单编号</th>
+                    <th>用户姓名</th>
+                    <th>用户地址</th>
+                    <th>订单内容</th>
+                    <th>订单金额</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023112001</td>
+                    <td>李大爷</td>
+                    <td>17栋502</td>
+                    <td>苹果999斤，香蕉999斤，牛奶1盒</td>
+                    <td>¥10000</td>
+                    <!-- Use Bootstrap button styles and ICONS -->
+                    <td><button class="btn btn-success" onclick="window.location.href='https://github.com/CUagiain/Group11/Order.html'"><i class="fa fa-check"></i> 接单</button></td>
+                </tr>
+                <tr>
+                    <td>2023112002</td>
+                    <td>张奶奶</td>
+                    <td>18栋203</td>
+                    <td>鸡蛋999个，面包999袋，酸奶2盒</td>
+                    <td>¥10000</td>
+                    <td><button class="btn btn-success"><i class="fa fa-check"></i> 接单</button></td>
+                </tr>
+                <tr>
+                    <td>2023112003</td>
+                    <td>王伯伯</td>
+                    <td>17栋301</td>
+                    <td>米饭2碗，菜心1份，肉末茄子1份</td>
+                    <td>¥30</td>
+                    <td><button class="btn btn-success"><i class="fa fa-check"></i> 接单</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
