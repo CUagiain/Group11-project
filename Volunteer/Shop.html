@@ -1,0 +1,427 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f5dc; 
+            line-height: 20px;
+            color: #333; 
+        }
+        
+        .container {
+            min-width: 900px;
+        }
+        
+        .wrapper {
+            background-color: #fffbe6; 
+            position: relative;
+            overflow: auto;
+        }
+        
+        #top {
+            color: #4a4a4a; 
+            padding: 15px;
+            font-size: 30px;
+            line-height: 26px;
+            background-color: #f0ead6; 
+        }
+        
+        #top h1 {
+            margin: 0;
+            line-height: 50px;
+            color: #8a6d3b; 
+        }
+        
+        #menubar {
+            width: 190px;
+            float: right;
+        }
+        
+        #main {
+            padding: 10px;
+            background-color: #ffffff;
+            font: 80% Verdana;
+        }
+        
+        #main h1, #main h2 {
+            color: #6b8e23; 
+        }
+        
+        #sidebar {
+            margin-bottom: 500px;
+            background-color: #ffffe0; 
+            color: #8b4513; 
+            padding: 10px;
+        }
+        
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            color: #ffffff;
+            background-color: #8a6d3b; 
+        }
+        
+        #menulist {
+            padding: 0;
+            font: 16px verdana;
+        }
+        
+        .menuitem {
+            width: 155px;
+            background-color: #6b8e23; 
+            border: 1px solid lightskyblue;
+            border-radius: 40px;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+       
+        .menuitem:hover {
+            background-color: #ffffff;
+            color: #6b8e23; 
+        }
+        
+        a {
+            color: #6b8e23;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+                font-size: 54px; 
+                color: rgb(0, 145, 255); 
+                text-align: center; 
+        }
+
+        p {
+                font-size: 36px; 
+                color: black; 
+                text-align: center; 
+        }
+        .shop-info {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        .shop-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .shop-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 10px;
+        }
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid gray;
+            padding: 10px;
+            cursor: pointer; /* Set the mouse style as a pointer */
+        }
+        .product-image {
+            width: 100px;
+            height: 100px;
+        }
+        .product-name {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .product-price {
+            color: red;
+            margin-top: 5px;
+        }
+        .product-stock {
+            color: green;
+            margin-top: 5px;
+        }
+        .cart-button {
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: lightblue;
+            font-size: 16px;
+            margin: 10px auto;
+        }
+        .cart-list {
+            display: none; /* The cart list is hidden by default */
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+            background-color: white;
+            overflow-y: scroll; /* Set the vertical scroll bar */
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        .cart-image {
+            width: 60px;
+            height: 60px;
+        }
+        .cart-name {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .cart-quantity {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .cart-price {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .cart-total {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px;
+        }
+        .cart-amount {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+    <!-- Introduce jQuery library files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Shop</h1>
+    <div class="shop-info">
+        <img src="https://th.bing.com/th/id/OIP.KmuUXmazZ7mHwazvkwegwQHaGQ?rs=1&pid=ImgDetMain" alt="店铺logo" class="shop-logo">
+        <span class="shop-name">鲜果时光水果店</span>
+    </div>
+    <div class="product-list">
+        <div class="product-item" data-name="苹果" data-price="5" data-stock="12">
+            <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="苹果" class="product-image">
+            <span class="product-name">苹果</span>
+            <span class="product-price">¥5/斤</span>
+            <span class="product-stock">库存：12斤</span>
+        </div>
+        <div class="product-item" data-name="香蕉" data-price="4" data-stock="15">
+            <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="香蕉" class="product-image">
+            <span class="product-name">香蕉</span>
+            <span class="product-price">¥4/斤</span>
+            <span class="product-stock">库存：15斤</span>
+        </div>
+        <div class="product-item" data-name="鲜牛奶" data-price="8" data-stock="23">
+            <img src="https://images.pexels.com/photos/236010/pexels-photo-236010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="牛奶" class="product-image">
+            <span class="product-name">鲜牛奶</span>
+            <span class="product-price">¥8/盒</span>
+            <span class="product-stock">库存：23盒</span>
+        </div>
+    </div>
+    <!-- Add a shopping cart button -->
+    <button class="cart-button">购物车</button>
+    <!-- Add a shopping cart list -->
+    <div class="cart-list">
+        <h3>购物车</h3>
+        <div class="cart-item" data-name="苹果" data-price="5">
+            <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="苹果" class="cart-image">
+            <span class="cart-name">苹果</span>
+            <span class="cart-quantity">数量：1斤</span>
+            <span class="cart-price">单价：¥5/斤</span>
+        </div>
+        <div class="cart-item" data-name="香蕉" data-price="4">
+            <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="香蕉" class="cart-image">
+            <span class="cart-name">香蕉</span>
+            <span class="cart-quantity">数量：1斤</span>
+            <span class="cart-price">单价：¥4/斤</span>
+        </div>
+        <div class="cart-item" data-name="鲜牛奶" data-price="8">
+            <img src="https://images.pexels.com/photos/236010/pexels-photo-236010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="牛奶" class="cart-image">
+            <span class="cart-name">鲜牛奶</span>
+            <span class="cart-quantity">数量：1盒</span>
+            <span class="cart-price">单价：¥8/盒</span>
+        </div>
+        <div class="cart-total">
+            <span class="cart-amount">总计：¥17</span>
+        </div>
+    </div>
+    <!-- Add some JavaScript and jQuery functionality -->
+    <script>
+     // Define a shopping cart object to store the information in the shopping cart
+var cart = {
+    // The list of goods in the shopping cart, each product has four attributes: name, unit price, quantity and total price
+    items: [],
+    // The total number of items in the shopping cart
+    count: 0,
+    // The total price of the items in the shopping cart
+    amount: 0,
+    // Add an item to the shopping cart, increase the amount if it already exists, otherwise create a new item
+    add: function(name, price) {
+        // Walk through the list of items in the shopping cart to see if you have the same item
+        for (var i = 0; i < this.items.length; i++) {
+            // If you find the same item, increase the quantity and total price, and then return
+            if (this.items[i].name == name) {
+                this.items[i].quantity++;
+                this.items[i].total = this.items[i].quantity * this.items[i].price;
+                return;
+            }
+        }
+        // If the same item is not found, a new item object is created and added to the list of items in the shopping cart
+        var item = {
+            name: name,
+            price: price,
+            quantity: 1,
+            total: price
+        };
+        this.items.push(item);
+    },
+    // Delete an item from the shopping cart, if the number is 1, delete the entire item, otherwise reduce the number
+    remove: function(name) {
+        // Walk through the list of items in the shopping cart to see if you have the same item
+        for (var i = 0; i < this.items.length; i++) {
+            // If you find the same thing, you reduce the quantity and the total price
+            if (this.items[i].name == name) {
+                this.items[i].quantity--;
+                this.items[i].total = this.items[i].quantity * this.items[i].price;
+                // If the quantity is 0, the entire item is deleted
+                if (this.items[i].quantity == 0) {
+                    this.items.splice(i, 1);
+                }
+                return;
+            }
+        }
+    },
+    // Calculate the total number of items and the total price in the shopping cart
+    calculate: function() {
+        // The initial total and total price are 0
+        this.count = 0;
+        this.amount = 0;
+        // Walk through the list of items in the shopping cart, adding up the quantity and total price
+        for (var i = 0; i < this.items.length; i++) {
+            this.count += this.items[i].quantity;
+            this.amount += this.items[i].total;
+        }
+    },
+    // Empty the list of goods in the shopping cart, total and total price
+    clear: function() {
+        this.items = [];
+        this.count = 0;
+        this.amount = 0;
+    }
+};
+
+// Defines a function that updates the text of the cart button to show the total number of items in the cart
+function updateCartButton() {
+    // Call the calculate method of the shopping cart object to calculate the total number of items and the total price
+    cart.calculate();
+    // Gets the cart button element
+    var cartButton = $(".cart-button");
+    // If the goods in the shopping cart are displayed on the button, the total amount of the goods will be displayed otherwise the shopping cart will be displayed
+    if (cart.count > 0) {
+        cartButton.text("购物车(" + cart.count + ")");
+    } else {
+        cartButton.text("购物车");
+    }
+}
+
+// Defines a function that updates the contents of the shopping cart list to display information about the items in the shopping cart
+function updateCartList() {
+    // Call the calculate method of the shopping cart object to calculate the total number of items and the total price
+    cart.calculate();
+    // Gets the elements of the shopping cart list
+    var cartList = $(".cart-list");
+    // Empty the contents of the shopping cart list
+    cartList.empty();
+    // Add a title to the shopping cart list
+    cartList.append("<h3>购物车</h3>");
+    // Walk through the list of items in the shopping cart and create an element for each item to add to the shopping cart list
+    for (var i = 0; i < cart.items.length; i++) {
+        var item = cart.items[i];
+        var cartItem = $("<div class='cart-item'></div>");
+        cartItem.attr("data-name", item.name);
+        cartItem.attr("data-price", item.price);
+        // Delete the item image element from the shopping cart list
+        cartItem.append("<span class='cart-name'>" + item.name + "</span>");
+        cartItem.append("<span class='cart-quantity'>数量：" + item.quantity + "</span>");
+        cartItem.append("<span class='cart-price'>单价：¥" + item.price + "</span>");
+        // Add a "+" button for each item in the shopping cart list, showing the" +" symbol
+        cartItem.append("<button class='add-button'>+</button>");
+        // Bind a click event to each "+" button, and when clicked, add one unit of that item to the shopping cart
+        $(".add-button").click(function() {
+            // Get the name and unit price of the item
+            var name = $(this).parent().data("name");
+            var price = $(this).parent().data("price");
+            // Call the add method of the shopping cart object to add one unit of the item to the shopping cart
+            cart.add(name, price);
+            // Update the text of the shopping cart button
+            updateCartButton();
+            // Update the contents of the shopping cart list
+            updateCartList();
+        });
+        // Add a "-" button for each item in the shopping cart list to display the" -" symbol
+        cartItem.append("<button class='remove-button'>-</button>");
+        // Bind a click event for each "-" button, and when clicked, delete one unit of the item from the shopping cart
+        $(".remove-button").click(function() {
+            // Get the name of the item
+            var name = $(this).parent().data("name");
+            // Call the remove method of the shopping cart object to remove one unit of the item from the shopping cart
+            cart.remove(name);
+            // Update the text of the shopping cart button
+            updateCartButton();
+            // Update the contents of the shopping cart list
+            updateCartList();
+        });
+        cartList.append(cartItem);
+    }
+    // Add a total element in the shopping cart list to show the total price of the goods in the shopping cart
+    var cartTotal = $("<div class='cart-total'></div>");
+    cartTotal.append("<span class='cart-amount'>总计：¥" + cart.amount + "</span>");
+    cartList.append(cartTotal);
+}
+
+// Defines a function that shows or hides the shopping cart list
+function toggleCartList() {
+    // Gets the elements of the shopping cart list
+    var cartList = $(".cart-list");
+    // Switch the display status of the shopping list
+    cartList.toggle();
+    // If the shopping cart list is displayed, update its contents
+    if (cartList.is(":visible")) {
+        updateCartList();
+    }
+}
+
+// After the page is loaded, perform the following operations
+$(document).ready(function() {
+    // Update the text of the shopping cart button
+    updateCartButton();
+    // Bind a click event to each item element, and when clicked, add a unit of that item to the shopping cart
+    $(".product-item").click(function() {
+        // Get the name and unit price of the item
+        var name = $(this).data("name");
+        var price = $(this).data("price");
+        // Call the add method of the shopping cart object to add one unit of the item to the shopping cart
+        cart.add(name, price);
+        // Update the text of the shopping cart button
+        updateCartButton();
+    });
+    // Bind a click event to the cart button to show or hide the cart list when clicked
+    $(".cart-button").click(function() {
+        toggleCartList();
+    });
+});
+</script>
+

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外卖柜状态</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5dc;
+    text-align: center;
+    font-size: 32px;
+    padding-top: 50px;
+  }
+  .locker {
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  .status {
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+  }
+  .empty {
+    background-color: #28a745;
+  }
+  .occupied {
+    background-color: #dc3545;
+  }
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .open {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .place {
+    background-color: #ffc107;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<h2>外卖柜状态</h2>
+
+<!-- Locker 1 -->
+<div id="locker1" class="locker">
+    <div>01</div>
+    <div id="status1" class="status empty">空闲</div>
+    <button onclick="placeFood(1)">放置外卖</button>
+    <button onclick="takeFood(1)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 2 -->
+  <div id="locker2" class="locker">
+    <div>02</div>
+    <div id="status2" class="status empty">空闲</div>
+    <button onclick="placeFood(2)">放置外卖</button>
+    <button onclick="takeFood(2)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 3 -->
+  <div id="locker3" class="locker">
+    <div>03</div>
+    <div id="status3" class="status empty">空闲</div>
+    <button onclick="placeFood(3)">放置外卖</button>
+    <button onclick="takeFood(3)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 4 -->
+  <div id="locker4" class="locker">
+    <div>04</div>
+    <div id="status4" class="status empty">空闲</div>
+    <button onclick="placeFood(4)">放置外卖</button>
+    <button onclick="takeFood(4)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 5 -->
+  <div id="locker5" class="locker">
+    <div>05</div>
+    <div id="status5" class="status empty">空闲</div>
+    <button onclick="placeFood(5)">放置外卖</button>
+    <button onclick="takeFood(5)" class="open">开柜</button>
+  </div>
+
+  <!-- Locker 6 -->
+<div id="locker6" class="locker">
+    <div>06</div>
+    <div id="status6" class="status empty">空闲</div>
+    <button onclick="placeFood(6)">放置外卖</button>
+    <button onclick="takeFood(6)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 7 -->
+  <div id="locker7" class="locker">
+    <div>07</div>
+    <div id="status7" class="status empty">空闲</div>
+    <button onclick="placeFood(7)">放置外卖</button>
+    <button onclick="takeFood(7)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 8 -->
+  <div id="locker8" class="locker">
+    <div>08</div>
+    <div id="status8" class="status empty">空闲</div>
+    <button onclick="placeFood(8)">放置外卖</button>
+    <button onclick="takeFood(8)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 9 -->
+  <div id="locker9" class="locker">
+    <div>09</div>
+    <div id="status9" class="status empty">空闲</div>
+    <button onclick="placeFood(9)">放置外卖</button>
+    <button onclick="takeFood(9)" class="open">开柜</button>
+  </div>
+  
+  <!-- Locker 10 --> 
+  <div id="locker10" class="locker">
+    <div>10</div>
+    <div id="status10" class="status empty">空闲</div>
+    <button onclick="placeFood(10)">放置外卖</button>
+    <button onclick="takeFood(10)" class="open">开柜</button>
+  </div>
+
+<!-- Locker 11 -->
+<div id="locker11" class="locker">
+  <div>11</div>
+  <div id="status11" class="status empty">空闲</div>
+  <button onclick="placeFood(11)">放置外卖</button>
+  <button onclick="takeFood(11)" class="open">开柜</button>
+</div>
+
+<!-- Locker 12 -->
+<div id="locker12" class="locker">
+  <div>12</div>
+  <div id="status12" class="status empty">空闲</div>
+  <button onclick="placeFood(12)">放置外卖</button>
+  <button onclick="takeFood(12)" class="open">开柜</button>
+</div>
+
+<!-- Locker 13 -->
+<div id="locker13" class="locker">
+  <div>13</div>
+  <div id="status13" class="status empty">空闲</div>
+  <button onclick="placeFood(13)">放置外卖</button>
+  <button onclick="takeFood(13)" class="open">开柜</button>
+</div>
+
+<!-- Locker 14 -->
+<div id="locker14" class="locker">
+  <div>14</div>
+  <div id="status14" class="status empty">空闲</div>
+  <button onclick="placeFood(14)">放置外卖</button>
+  <button onclick="takeFood(14)" class="open">开柜</button>
+</div>
+
+<!-- Locker 15 -->
+<div id="locker15" class="locker">
+  <div>15</div>
+  <div id="status15" class="status empty">空闲</div>
+  <button onclick="placeFood(15)">放置外卖</button>
+  <button onclick="takeFood(15)" class="open">开柜</button>
+</div>
+
+<!-- Locker 16 -->
+<div id="locker16" class="locker">
+  <div>16</div>
+  <div id="status16" class="status empty">空闲</div>
+  <button onclick="placeFood(16)">放置外卖</button>
+  <button onclick="takeFood(16)" class="open">开柜</button>
+</div>
+
+<!-- Locker 17 -->
+<div id="locker17" class="locker">
+  <div>17</div>
+  <div id="status17" class="status empty">空闲</div>
+  <button onclick="placeFood(17)">放置外卖</button>
+  <button onclick="takeFood(17)" class="open">开柜</button>
+</div>
+
+<!-- Locker 18 -->
+<div id="locker18" class="locker">
+  <div>18</div>
+  <div id="status18" class="status empty">空闲</div>
+  <button onclick="placeFood(18)">放置外卖</button>
+  <button onclick="takeFood(18)" class="open">开柜</button>
+</div>
+
+<!-- Locker 19 -->
+<div id="locker19" class="locker">
+  <div>19</div>
+  <div id="status19" class="status empty">空闲</div>
+  <button onclick="placeFood(19)">放置外卖</button>
+  <button onclick="takeFood(19)" class="open">开柜</button>
+</div>
+
+<!-- Locker 20 --> 
+<div id="locker20" class="locker">
+  <div>20</div>
+  <div id="status20" class="status empty">空闲</div>
+  <button onclick="placeFood(20)">放置外卖</button>
+  <button onclick="takeFood(20)" class="open">开柜</button>
+</div>
+
+<script>
+function placeFood(lockerId) {
+    var status = document.getElementById('status' + lockerId);
+    status.className = 'status occupied';
+    status.textContent = '已满';
+}
+
+function takeFood(lockerId) {
+    var status = document.getElementById('status' + lockerId);
+    status.className = 'status empty';
+    status.textContent = '空闲';
+  }
+</script>
+
+</body>
+</html>
