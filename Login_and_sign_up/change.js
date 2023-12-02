@@ -10,13 +10,13 @@ for (let i = 0; i < info_btn.length; i++) {
         var userType = document.getElementById('userType').value;
         switch (userType) {
             case 'Seller':
-                window.location.href = 'creatShop.html'; // 替换为卖家页面的
+                window.location.href = 'https://cuagiain.github.io/Group11/Older/creatShop.html'; // 替换为卖家页面的
                 break;
             case 'Older people':
-                window.location.href = 'home.html'; // 替换为老年人页面
+                window.location.href = 'https://cuagiain.github.io/Group11/Older/home.html'; // 替换为老年人页面
                 break;
             case 'Volunteer':
-                window.location.href = 'info.html'; // 替换为志愿者页面
+                window.location.href = 'https://cuagiain.github.io/Group11/Volunteer/info.html'; // 替换为志愿者页面
                 break;
             default:
                 
