@@ -10,7 +10,7 @@ for (let i = 0; i < info_btn.length; i++) {
         var userType = document.getElementById('userType').value;
         switch (userType) {
             case 'Seller':
-                window.location.href = 'https://cuagiain.github.io/Group11/creatShop.html'; 
+                window.location.href = 'https://cuagiain.github.io/Group11/createShop.html'; 
                 break;
             case 'Buyer':
                 window.location.href = 'https://cuagiain.github.io/Group11/home.html'; 
