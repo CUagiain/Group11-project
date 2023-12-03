@@ -71,8 +71,8 @@ body{
 }
 .container .card .imgBx img{    /*img图片大小*/
 /*max-width: 100%;*/
-    height: 240px;
-    width: 240px;
+    height: 260px;
+    width: 260px;
     border-radius: 4px;
 }
 
