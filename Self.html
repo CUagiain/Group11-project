@@ -100,6 +100,14 @@ p{
     text-align: center;
 }
 </style>
+<script>
+    function updatePhoneNumber() {
+        var newPhoneNumber = document.getElementById("newPhoneNum").value;
+        var currentPhoneNumber = document.getElementById("currentPhoneNum").textContent;
+        document.getElementById("currentPhoneNum").textContent = currentPhoneNumber + ", " + newPhoneNumber;
+        location.reload(); // 重新加载页面以显示更新
+    }
+</script>
 </head>
 <body>
     <div id="top">
@@ -117,14 +125,15 @@ p{
     </div> 
     <div id="sidebar">
         <alt="Volunteer pic" class="user-avatar" style="text-align: center ;">
-        <p>Name:   $</p>
+        <p>Name:Volunteer1</p>
         <br>
-        <p>Phone number:  $</p>
+        <p id="currentPhoneNum">Phone number: 13888888888</p>
         <br>
-        <p>Area:   </p>
+        <p>Area:Building 20</p>
         <p>Add new phone number:
-        <input type="tel" placeholder="new phone num" ></p>
-        <p><input type="Submit"> to make a change</input></p>
+            <input type="tel" id="newPhoneNum" placeholder="new phone num">
+        </p>
+        <p><button onclick="updatePhoneNumber()">Submit</button></p>
     </div>
     </body>
     </html>
