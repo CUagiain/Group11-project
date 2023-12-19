@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f5f5dc; 
+            line-height: 20px;
+            color: #333; 
+        }
+        
+        .container {
+            min-width: 900px;
+        }
+        
+        .wrapper {
+            background-color: #fffbe6; 
+            position: relative;
+            overflow: auto;
+        }
+        
+        #top {
+            color: #4a4a4a; 
+            padding: 15px;
+            font-size: 30px;
+            line-height: 26px;
+            background-color: #f0ead6; 
+        }
+        
+        #top h1 {
+            margin: 0;
+            line-height: 50px;
+            color: #8a6d3b; 
+        }
+        
+        #menubar {
+            width: 190px;
+            float: right;
+        }
+        
+        #main {
+            padding: 10px;
+            background-color: #ffffff;
+            font: 80% Verdana;
+        }
+        
+        #main h1, #main h2 {
+            color: #6b8e23; 
+        }
+        
+        #sidebar {
+            margin-bottom: 500px;
+            background-color: #ffffe0; 
+            color: #8b4513; 
+            padding: 10px;
+        }
+        
+        #bottom {
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            color: #ffffff;
+            background-color: #8a6d3b; 
+        }
+        
+        #menulist {
+            padding: 0;
+            font: 16px verdana;
+        }
+        
+        .menuitem {
+            width: 155px;
+            background-color: #6b8e23; 
+            border: 1px solid lightskyblue;
+            border-radius: 40px;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+      
+        a {
+            color: white; 
+            text-decoration: none; /* 移除下划线 */
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .menuitem {
+            width: 155px;
+            background-color: #6b8e23;
+            border: 1px solid lightskyblue;
+            border-radius: 40px;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 10px auto; /* 居中显示 */
+            padding: 5px;
+            text-align: center; /* 文本居中 */
+            cursor: pointer;
+            font-size: 24px; /* 增加字体大小 */
+        }
+
+        h1 {
+                font-size: 54px; 
+                color: rgb(0, 145, 255); 
+                text-align: center; 
+        }
+
+        p {
+                font-size: 36px; 
+                color: black; 
+                text-align: center; 
+        }
+        .shop-info {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        .shop-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .shop-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 10px;
+        }
+        .product-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid gray;
+            padding: 10px;
+            cursor: pointer; /* Set the mouse style as a pointer */
+        }
+        .product-image {
+            width: 100px;
+            height: 100px;
+        }
+        .product-name {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .product-price {
+            color: red;
+            margin-top: 5px;
+        }
+        .product-stock {
+            color: green;
+            margin-top: 5px;
+        }
+        .cart-button {
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: lightblue;
+            font-size: 16px;
+            margin: 10px auto;
+        }
+        .cart-list {
+            display: none; /* The cart list is hidden by default */
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            width: 300px;
+            height: 400px;
+            border: 1px solid black;
+            background-color: white;
+            overflow-y: scroll; /* Set the vertical scroll bar */
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        .cart-image {
+            width: 60px;
+            height: 60px;
+        }
+        .cart-name {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .cart-quantity {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .cart-price {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .cart-total {
+            display: flex;
+            justify-content: flex-end;
+            margin: 10px;
+        }
+        .cart-amount {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <h1>Shop Types</h1>
+    <div class="wrapper">
+        <div class="menu-list">
+            <ul>
+                <li class="menuitem"><a href="https://cuagiain.github.io/Group11/Shop.html">Cold-chain Food</a></li>
+                <li class="menuitem"><a href="https://cuagiain.github.io/Group11/Shop.html">Take-out Foods</a></li>
+                <li class="menuitem"><a href="https://cuagiain.github.io/Group11/Shop.html">Daily Use</a></li>
+                <li class="menuitem"><a href="https://cuagiain.github.io/Group11/Shop.html">Medicine</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
