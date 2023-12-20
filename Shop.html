@@ -159,6 +159,15 @@
             font-size: 16px;
             margin: 10px auto;
         }
+        .submit-button{
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: lightblue;
+            font-size: 16px;
+            margin: 10px auto;
+        }
         .cart-list {
             display: none; /* The cart list is hidden by default */
             position: absolute;
@@ -231,8 +240,8 @@
             <span class="product-stock">Inventory：23carton</span>
         </div>
     </div>
-    <!-- Add a shopping cart button -->
 
+    <button id="submit-button" class="submit-button">Submit</button>
     <button class="cart-button">Shopping Cart</button>
     <!-- Add a shopping cart list -->
     <div class="cart-list">
@@ -258,7 +267,7 @@
         <div class="cart-total">
             <span class="cart-amount">Total：¥17</span>
         </div>
-             <button id="submit-button" class="submit-button">Submit</button>
+
     </div>
 
     <!-- Add some JavaScript and jQuery functionality -->
