@@ -257,7 +257,9 @@
         <div class="cart-total">
             <span class="cart-amount">Total：¥17</span>
         </div>
+        
     </div>
+    <button id="submit-button" class="cart-button">Submit</button>
     <!-- Add some JavaScript and jQuery functionality -->
     <script>
      // Define a shopping cart object to store the information in the shopping cart
@@ -421,6 +423,11 @@ $(document).ready(function() {
     // Bind a click event to the cart button to show or hide the cart list when clicked
     $(".cart-button").click(function() {
         toggleCartList();
+    });
+        // 为提交按钮添加点击事件处理程序
+    $("#submit-button").click(function() {
+        // 当按钮被点击时，跳转到指定的 URL
+        window.location.href = "https://cuagiain.github.io/Group11/info2.html";
     });
 });
 </script>
